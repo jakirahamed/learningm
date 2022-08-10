@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+BoxDecoration boxdecoretion = BoxDecoration(
+  borderRadius: BorderRadius.circular(10),
+  border: Border.all(width: 2, color: AppTheme.surfaceD),
+);
+
 class AppTheme {
   static MaterialColor primary = Colors.orange;
   static Color primaryContainer = Colors.orange.shade300;
@@ -150,6 +155,10 @@ class AppTheme {
       elevation: 0,
       titleTextStyle: const TextTheme().headline5,
       iconTheme: const IconThemeData().copyWith(color: onColorD),
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: surfaceD,
+      foregroundColor: primary,
     ),
     navigationBarTheme: NavigationBarThemeData(
       height: 60,
