@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "554423684365",
+    "project_id": "learning-b305b",
+    "storage_bucket": "learning-b305b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554423684365:android:58b61ac4d733a40ff23444",
+        "android_client_info": {
+          "package_name": "com.example.learning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554423684365-o900ap2tl90obu97ichlg2cibqcmh2v7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwA15X4e2gTSqZdDpX0saJ_Kvn1QYesnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554423684365-o900ap2tl90obu97ichlg2cibqcmh2v7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "554423684365-6ollf8d1mlq9juq8jijs038s3t5ip2ao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.learning"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554423684365:android:1754c1446a66fb51f23444",
+        "android_client_info": {
+          "package_name": "com.example.learningm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554423684365-o900ap2tl90obu97ichlg2cibqcmh2v7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwA15X4e2gTSqZdDpX0saJ_Kvn1QYesnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554423684365-o900ap2tl90obu97ichlg2cibqcmh2v7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "554423684365-6ollf8d1mlq9juq8jijs038s3t5ip2ao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.learning"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
