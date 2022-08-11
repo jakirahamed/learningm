@@ -18,7 +18,7 @@ class ProductService {
   final requirementsController = TextEditingController();
   final descriptionController = TextEditingController();
 
-  addProduct(String url) async {
+  addProduct(String url, String? categoris) async {
     if (titleController.text.isEmpty) {
       EasyLoading.showToast('Enter Title');
     } else if (authernameController.text.isEmpty) {
@@ -35,6 +35,8 @@ class ProductService {
       EasyLoading.showToast('Requirement empty');
     } else if (descriptionController.text.isEmpty) {
       EasyLoading.showToast('Enter Description');
+    } else if (categoris == null) {
+      EasyLoading.showToast('categories is empty');
     } else {
       final model = ProductModel(
         title: titleController.text,
@@ -48,6 +50,7 @@ class ProductService {
         requirements: requirementsController.text,
         description: descriptionController.text,
         img: url,
+        categories: categoris,
       );
       EasyLoading.show();
       final firebase = FirebaseFirestore.instance;
@@ -65,3 +68,11 @@ class ProductService {
     }
   }
 }
+
+final catagorisListProvider = Provider<List<String>>((ref) {
+  return ["Featured", "Design", "Development", "Marketing"];
+});
+
+final selectedCategorisProvider = StateProvider<String?>((ref) {
+  return null;
+});

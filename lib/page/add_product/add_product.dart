@@ -15,6 +15,8 @@ class AddProduct extends ConsumerWidget {
     final productservice = ref.watch(prductserviceProvider);
     final image = ref.watch(imageServiceProvider);
     final imageservice = ref.read(imageServiceProvider.notifier);
+    final categoryList = ref.watch(catagorisListProvider);
+    final category = ref.watch(selectedCategorisProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -27,7 +29,8 @@ class AddProduct extends ConsumerWidget {
             filename: productservice.titleController.text,
             imagepath: image.first,
           );
-          productservice.addProduct(url);
+          productservice.addProduct(url, category);
+          imageservice.clear();
         },
         child: const Icon(
           Icons.add,
@@ -97,6 +100,35 @@ class AddProduct extends ConsumerWidget {
                 keyboardType: TextInputType.number,
                 decoration: const InputDecoration(hintText: 'Enter Price'),
                 inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+              ),
+              const SizedBox(height: 10),
+              Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.surface,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      hint: const Text('Select Categorey'),
+                      isExpanded: true,
+                      value: category,
+                      items: categoryList
+                          .map(
+                            (e) => DropdownMenuItem<String>(
+                              value: e,
+                              child: Text(e),
+                            ),
+                          )
+                          .toList(),
+                      onChanged: (v) {
+                        ref.read(selectedCategorisProvider.state).state = v;
+                      },
+                    ),
+                  ),
+                ),
               ),
               const SizedBox(height: 10),
               TextFormField(
