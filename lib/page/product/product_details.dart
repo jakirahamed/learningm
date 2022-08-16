@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:learningm/page/all_product/show_product.dart';
+import 'package:learningm/page/product/edit_product.dart';
+import 'package:learningm/page/product/show_product.dart';
 
 import '../../widget/network_img.dart';
 
@@ -15,7 +16,9 @@ class ProductDetails extends ConsumerWidget {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, EditProduct.routeName);
+            },
             icon: const Icon(Icons.edit_note_outlined),
           )
         ],

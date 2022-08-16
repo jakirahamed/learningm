@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:learningm/page/add_product/add_product.dart';
-import 'package:learningm/page/all_product/all_product.dart';
 import 'package:learningm/page/flash/flash.dart';
 import 'package:learningm/page/home/deshboard.dart';
 import 'package:learningm/page/order/order.dart';
+import 'package:learningm/page/product/all_product.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);

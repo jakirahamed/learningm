@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:learningm/page/add_product/add_product.dart';
-import 'package:learningm/page/all_product/all_product.dart';
-import 'package:learningm/page/all_product/product_details.dart';
 import 'package:learningm/page/bottom_nav.dart';
 import 'package:learningm/page/flash/flash.dart';
 import 'package:learningm/page/home/deshboard.dart';
 import 'package:learningm/page/order/order.dart';
+import 'package:learningm/page/product/all_product.dart';
+import 'package:learningm/page/product/edit_product.dart';
+import 'package:learningm/page/product/product_details.dart';
 import 'package:learningm/page/search/search.dart';
 
 class Routes {
@@ -39,6 +40,10 @@ class Routes {
       case SearchPage.routeName:
         return MaterialPageRoute(
           builder: (context) => const SearchPage(),
+        );
+      case EditProduct.routeName:
+        return MaterialPageRoute(
+          builder: (context) => const EditProduct(),
         );
       case ProductDetails.routeName:
         if (arg is String) {

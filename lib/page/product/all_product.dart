@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:learningm/page/all_product/product_details.dart';
-import 'package:learningm/page/all_product/show_product.dart';
+import 'package:learningm/page/product/product_details.dart';
+import 'package:learningm/page/product/show_product.dart';
 
 import '../../widget/network_img.dart';
 
